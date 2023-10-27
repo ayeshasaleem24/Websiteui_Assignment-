@@ -53,7 +53,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              '"Ayesha Website is a fantastic online destination. The design is modern and user-friendly, and I had a seamless experience finding what I needed. Ayesha Website has become my preferred choice."',
+              '"Ayesha Website is a fantastic online destination. The design is modern and user-friendly, and I had a seamless experience finding what I needed. Ayesha Website has become my preferred choice.\n 2 hours ago ',
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -76,7 +76,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              'Ayesha Website is a true marvel. The design is captivating, and the interface is so intuitive. Its clear that the creators have put a lot of effort into ensuring a visually engaging and accessible platform.',
+              'Ayesha Website is a true marvel. The design is captivating, and the interface is so intuitive. Its clear that the creators have put a lot of effort into ensuring a visually engaging and accessible platform.\n 2 hours ago',
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -98,7 +98,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              "I've been a loyal user of Ayesha Website, and it's my favorite spot for all things [mention the website's purpose]. The design is not only beautiful but also highly functional, making my online experience enjoyable.",
+              "I've been a loyal user of Ayesha Website, and it's my favorite spot for all things [mention the website's purpose]. The design is not only beautiful but also highly functional, making my online experience enjoyable. \n 6 hours ago",
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -120,7 +120,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-             "Kudos to the team behind Ayesha Website! The design is outstanding - modern, responsive, and visually stunning. Navigating the site is a breeze, and Safiya Khan highly recommends it.",
+             "Kudos to the team behind Ayesha Website! The design is outstanding - modern, responsive, and visually stunning. Navigating the site is a breeze, and Safiya Khan highly recommends it.\n 8 hours ago",
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -142,7 +142,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              "Ayesha Website is my go-to for all things related to [mention your website's purpose]. The design is fantastic - sleek, elegant, and user-friendly. Bilal Ali appreciates the excellent user experience.",
+              "Ayesha Website is my go-to for all things related to [mention your website's purpose]. The design is fantastic - sleek, elegant, and user-friendly. Bilal Ali appreciates the excellent user experience. \n 1 day ago",
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -164,7 +164,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              "I discovered Ayesha Website, and the design immediately grabbed my attention. It's elegant and easy to use",
+              "I discovered Ayesha Website, and the design immediately grabbed my attention. It's elegant and easy to use \n 12 hours ago",
               style: TextStyle(color: Colors.grey),
             ),
           ),
@@ -186,7 +186,7 @@ class _NotifViewState extends State<NotifView> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              "Ayesha Website is my go-to for all things related to [mention your website's purpose]. The design is fantastic - sleek, elegant, and user-friendly. Bilal Ali appreciates the excellent user experience.",
+              "Ayesha Website is my go-to for all things related to [mention your website's purpose]. The design is fantastic - sleek, elegant, and user-friendly. Bilal Ali appreciates the excellent user experience. \n 2 days ago",
               style: TextStyle(color: Colors.grey),
             ),
           ),

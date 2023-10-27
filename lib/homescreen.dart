@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:websiteui/product1.dart';
+import 'package:websiteui/product2.dart';
+import 'package:websiteui/product3.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key});
@@ -15,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
   ];
 
   final List<String> productImageUrls = [
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi1ruOdfEbeIntj4FS2g44LdzOhnsxH2BKJw&usqp=CAU',
+    'https://cdn.shopify.com/s/files/1/0775/7363/files/closeup-shot-of-birkin-ostrich-in-terre-cuite-laying-on-a-sofa_1024x1024.jpg?v=1646346592',
     'https://rukminim1.flixcart.com/image/450/500/xif0q/shoe/7/2/m/6-tm-12-6-trm-white-original-imagjqyzz8z9jrgf.jpeg?q=90&crop=false',
     'https://nordgreen.com/cdn/shop/collections/CP_Male_Native_961fa23a-161f-4a6d-ad4d-fc4ca0ddec96_970x.webp?v=1673502035',
   ];
@@ -64,9 +67,28 @@ class _HomeViewState extends State<HomeView> {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  buildProductCard(productImageUrls[0], 'Axel Arigato', 'Clean 90 Triple Sneakers', '\$250.38'),
-                  buildProductCard(productImageUrls[1], 'The Marc Jacobs', 'Traveler Tote', '\$110.89'),
-                  buildProductCard(productImageUrls[2], 'Classy Watch', 'Trandy Fashion', '\$880.89'),
+              GestureDetector(
+              onTap: () {
+             // Navigate to ProductView when the first tile is pressed
+             Navigator.push(context, MaterialPageRoute(builder: (context) => Product1View()));
+             },
+             child: buildProductCard(productImageUrls[0],'The Marc Jacobs', 'Traveler Tote', '\$110.89'),
+            ),
+             GestureDetector( 
+              onTap: () {
+             // Navigate to ProductView when the first tile is pressed
+             Navigator.push(context, MaterialPageRoute(builder: (context) => Product2View()));
+             },
+             child: buildProductCard(productImageUrls[1], 'Axel Arigato', 'Clean 90 Triple Sneakers', '\$250.38'),
+            ),   
+             GestureDetector( 
+              onTap: () {
+             // Navigate to ProductView when the first tile is pressed
+             Navigator.push(context, MaterialPageRoute(builder: (context) => Product3View()));
+             },
+             child:        buildProductCard(productImageUrls[2], 'Classy Watch', 'Trendy Fashion', '\$880.89'),
+            ),   
+                
 
                 ],
               ),
@@ -186,53 +208,56 @@ ListTile(
       ),
     );
   }
-
-  Widget buildProductCard(String productUrl, String brand, String product, String price) {
-    return Container(
-      margin: EdgeInsets.only(left: 16.0, right: 16.0),
-      width: 200.0, // Adjust the width as needed
-      child: Card(
-        child: Column(
-          children: [
-            Container(
-              height: 100.0, // Adjust the height as needed
-              width: double.infinity,
+Widget buildProductCard(String productUrl, String brand, String product, String price) {
+  return Container(
+    margin: EdgeInsets.only(left: 16.0, right: 16.0),
+    width: 200.0, // Adjust the width as needed
+    child: Card(
+      child: Column(
+        children: [
+          Container(
+            height: 100.0, // Adjust the height as needed
+            width: double.infinity,
+            child: ClipRRect( // Add ClipRRect to round the corners
+              borderRadius: BorderRadius.circular(10), // You can adjust the radius value to control the roundness
               child: Image.network(
                 productUrl,
                 fit: BoxFit.cover,
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  brand,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                brand,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 ),
-                SizedBox(height: 9),
-                Text(
-                  product,
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
+              ),
+              SizedBox(height: 9),
+              Text(
+                product,
+                style: TextStyle(
+                  color: Colors.grey,
                 ),
-                SizedBox(height: 3),
-                Text(
-                  price,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
+              ),
+              SizedBox(height: 3),
+              Text(
+                price,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
+
 }
 
